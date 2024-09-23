@@ -1,0 +1,59 @@
+﻿@model IEnumerable<BookShop.ViewModels.OrderVM>
+@{
+    ViewData["Title"] = "MyOrder";
+    Layout = "~/Views/Shared/_SubLayout.cshtml";
+}
+<!--breadcrumbs area start-->
+<div class="breadcrumbs_area">
+    <div class="row">
+        <div class="col-12">
+            <div class="breadcrumb_content">
+                <ul>
+                    <li><a href="/">home</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li>My Order</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs area end-->
+<div class="row">
+    <div class="col-12">
+        <div class="table_desc">
+            <div class="cart_page table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th class="">Mã đơn hàng</th>
+                            <th class="">Tên khách hàng</th>
+                            <th class="">Số điện thoại</th>
+                            <th class="">Tổng tiền</th>
+                            <th class="">Ngày đặt hàng</th>
+                            <th class="">Trạng thái</th>
+                            <th class="">Xem cho tiết</th>
+                            <th class="">Hủy đơn</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr data-masp="@item.OrderId">
+                                <td>@item.OrderId</td>
+                                <td>@item.CustomerName</td>
+                                <td>@item.PhoneNumber</td>
+                                <td>@item.TotalPrice VNĐ</td>
+                                <td>@item.OrderDate</td>
+                                <td>@item.State</td>
+                                <td><a asp-action="OrderDetail" asp-controller="Customer" asp-route-orderId="@item.OrderId" style="color:#54b8a6;font-weight:bold">Xem</a></td>
+                                <td><a style="color:#54b8a6;font-weight:bold" href="#">Hủy</a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

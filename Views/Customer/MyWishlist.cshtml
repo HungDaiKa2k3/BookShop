@@ -1,0 +1,207 @@
+﻿@model IEnumerable<BookShop.ViewModels.WishlistVM>
+@{
+    ViewData["Title"] = "MyWishlist";
+    Layout = "~/Views/Shared/_SubLayout.cshtml";
+}
+
+<!--breadcrumbs area start-->
+<div class="breadcrumbs_area">
+    <div class="row">
+        <div class="col-12">
+            <div class="breadcrumb_content">
+                <ul>
+                    <li><a href="/">home</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li>wishlist</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs area end-->
+<!--shopping cart area start -->
+<div class="shopping_cart_area">
+    <form action="#">
+        <div class="row">
+            <div class="col-12">
+                <div class="table_desc wishlist">
+                    <div class="cart_page table-responsive">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th class="product_remove">Xóa</th>
+                                    <th class="product_thumb">Hình ảnh</th>
+                                    <th class="product_name">Tên sản phẩm</th>
+                                    <th class="product-price">Giá</th>
+                                    <th class="product_total">Add To Cart</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                    <tr data-masp="@item.ProductId">
+                                        <td class="product_remove"><a href="#" data-toggle="modal" data-target="#modal3" id="removeWishlist" >X</a></td>
+                                        <td class="product_thumb"><a asp-action="ViewDetail" asp-controller="Products" asp-route-productid="@item.ProductId"><img style="width:200px" src="assets\img\product\@item.Image" alt=""></a></td>
+                                        <td class="product_name"><a asp-action="ViewDetail" asp-controller="Products" asp-route-productid="@item.ProductId">@item.ProductName</a></td>
+                                        <td class="product-price">@item.Price VNĐ</td>
+                                        <td class="product_total"><a href="#" id="addCart">Add To Cart</a></td>
+                                    </tr>
+                                }
+
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </form>
+    <div class="row">
+        <div class="col-12">
+            <div class="wishlist-share">
+                <h4>Share on:</h4>
+                <ul>
+                    <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                    <li><a href="#"><i class="fa fa-vimeo"></i></a></li>
+                    <li><a href="#"><i class="fa fa-tumblr"></i></a></li>
+                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!--shopping cart area end -->
+
+<div class="modal fade" id="modal3">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Thông báo</h4>
+                <button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close">
+                    x
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5>Xóa sản phẩm khỏi danh sách yêu thích</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                <a onclick="confirmRemoveWishlist2(masp); return false;" data-dismiss="modal" class="btn btn-primary text-white">Xác nhận</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        var masp;
+        var row;
+        $(document).ready(function () {
+            $(document).on('click', '#removeWishlist', function () {
+                masp = $(this).closest("tr").data("masp");
+                row = $(this).closest('tr');
+            });
+
+            $(document).on("click", ".cart_remove", function () {
+                var id = $(this).closest(".cart_item").attr("id");
+                $.ajax({
+                    url: '/Customer/removeCart',
+                    data: { productId: id },
+                    method: 'POST',
+                    success: function (response) {
+                        if (response.status == "success") {
+                            var image = response.result.image;
+                            var productName = response.result.productName;
+                            var price = response.result.price;
+                            var quantity = response.result.quantity;
+                            var id = response.result.productId;
+                            var total = parseInt($(".prices").text());
+                            var quan = parseInt($(".total_quan").text()) - quantity;
+                            $(".prices").text(total - price * quantity + " VNĐ");
+                            $(".ships").text(total * 0.05 - price * 0.05 * quantity + " VNĐ");
+                            $(".total_ship").text(total * 1.05 - price * 1.05 * quantity + " VNĐ");
+                            $(".total_quan").text(quan + " sp - ");
+
+                            $(".mini_cart").children(`#${id}`).empty();
+                            //alert('Sản phẩm đã xóa khỏi vào giỏ hàng!');
+                        }
+                    },
+                    error: function (xhr, status, error) {
+                        alert("Có lỗi xảy ra: " + error);
+                    }
+                });
+            });
+
+            $(document).on('click', '#addCart', function () {
+                masp = $(this).closest("tr").data("masp");
+                var quantity = 1;
+                $.ajax({
+                    url: "/Customer/addCart",
+                    data: { productId: masp, quantity: quantity },
+                    method: "POST",
+                    success: function (response) {
+                        var image = response.result.image;
+                        var productName = response.result.productName;
+                        var price = response.result.price;
+                        var quantity2 = response.result.quantity;//Số lượng tổng
+                        var id = response.result.productId;
+                        if (quantity2 === quantity) {
+                            $(".mini_cart").prepend(`
+                                     <div class="cart_item" id="${id}">
+                                        <div class="cart_img">
+                                                    <a href="#"><img src="assets/img/product/${image}" alt=""></a>
+                                        </div>
+                                        <div class="cart_info">
+                                            <a href="#">${productName}</a>
+                                            <span class="cart_price">${price} VNĐ</span>
+                                            <span class="quantity">Số lượng: ${quantity2}</span>
+                                        </div>
+                                        <div class="cart_remove">
+                                            <a title="Remove this item" href="#"><i class="fa fa-times-circle"></i></a>
+                                        </div>
+                                    </div>
+                                `);
+
+
+                        } else {
+                            //id của cart
+                            $(".mini_cart").children(`#${id}`).find(".quantity").text("Số lượng: " + quantity2);
+                        }
+                        var total = parseInt($(".prices").text());
+                        var quan = parseInt($(".total_quan").text()) + parseInt(quantity);
+                        $(".prices").text(total + price * quantity + " VNĐ");
+                        $(".ships").text(total * 0.05 + price * 0.05 * quantity + " VNĐ");
+                        $(".total_ship").text(total * 1.05 + price * 1.05 * quantity + " VNĐ");
+                        $(".total_quan").text(quan + " sp - ");
+                        //alert('Sản phẩm đã được thêm vào giỏ hàng!');
+                    },
+                    error: function (xhr, status, error) {
+                        alert("Có lỗi xảy ra: " + error);
+                    }
+                });
+            });
+        });
+        function confirmRemoveWishlist2(masp) {
+            $.ajax({
+                url: "/Customer/removeWishlist",
+                data: { productId: masp },
+                method: "POST",
+                success: function (result) {
+                    $('#wishlist-container').html(result);
+                    row = row.empty();
+                    alert('Sản phẩm đã xóa khỏi danh sách yêu thích!');
+                },
+                error: function (xhr, status, error) {
+                    alert("Có lỗi xảy ra: " + error);
+                }
+            });
+        }
+
+    </script>
+}
+

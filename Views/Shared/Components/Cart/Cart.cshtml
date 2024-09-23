@@ -1,0 +1,38 @@
+﻿@model IEnumerable<BookShop.ViewModels.CartVM>
+
+<div class="shopping_cart">
+    <a href="#"><i class="fa fa-shopping-cart"></i> <span class="total_quan">@Model.Sum(c => c.Quantity) sp -</span> <span class="total_ship">@Model.Sum(p => p.Total * 1.05) VNĐ</span>   <i class="fa fa-angle-down"></i></a>
+
+    <!--mini cart-->
+    <div class="mini_cart">
+        @foreach(var item in Model)
+        {
+            <div class="cart_item" id="@item.ProductId">
+                <div class="cart_img">
+                    <a asp-action="ViewDetail" asp-controller="Products" asp-route-productid="@item.ProductId"><img src="assets\img\product\@item.Image" alt=""></a>
+                </div>
+                <div class="cart_info">
+                    <a asp-action="ViewDetail" asp-controller="Products" asp-route-productid="@item.ProductId"> @item.ProductName</a>
+                    <span class="cart_price">@item.Price VNĐ</span>
+                    <span class="quantity">Số lượng: @item.Quantity</span>
+                </div>
+                <div class="cart_remove">
+                    <a title="Remove this item" href="#"><i class="fa fa-times-circle"></i></a>
+                </div>
+            </div>
+        }
+
+        <div class="shipping_price">
+            <span> Shipping </span>
+            <span class="ships">  @Model.Sum(c => c.Total * 0.05) VNĐ </span>
+        </div>
+        <div class="total_price">
+            <span> Total </span>
+            <span class="prices">@Model.Sum(c=>c.Total) VNĐ</span>
+        </div>
+        <div class="cart_button">
+            <a href="checkout.html"> Check out</a>
+        </div>
+    </div>
+    <!--mini cart end-->
+</div>

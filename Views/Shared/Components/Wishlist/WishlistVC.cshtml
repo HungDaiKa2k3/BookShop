@@ -1,0 +1,27 @@
+﻿@model IEnumerable<BookShop.ViewModels.WishlistVM>
+
+<div class="sidebar_widget wishlist mb-35">
+    <div class="block_title">
+        <h3><a href="#">Yêu thích</a></h3>
+    </div>
+    @foreach(var item in Model)
+    {
+        <div class="cart_item">
+            <div class="cart_img">
+                <a asp-action="ViewDetail" asp-controller="Products" asp-route-productid="@item.ProductId"><img src="assets\img\product\@item.Image" alt="@item.ProductName"></a>
+            </div>
+            <div class="cart_info">
+                <a href="#">@item.ProductName</a>
+                <span class="cart_price">@item.Price VNĐ</span>
+            </div>
+            <div class="cart_remove">
+                <a data-masp="@item.ProductId" data-toggle="modal" data-target="#modal3" onclick="getProductId(this) ;return false;" title="Remove this item" href="#"><i class="fa fa-times-circle"></i></a>
+            </div>
+        </div>
+    }
+
+    <div class="block_content">
+        <p>@Model.Count()  Sản phẩm</p>
+        <a href="/mywishlist">» Danh sách yêu thích</a>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+﻿@model IEnumerable<BookShop.Models.Category>
+
+<div class="sidebar_widget catrgorie mb-35">
+    <h3>Danh mục</h3>
+    <ul>
+        @foreach(var item in Model)
+        {
+            <li >
+                <a href="#" class='category-link' data-category="@item.CategoryId"><i class=""></i> @item.Name</a>
+            </li>
+        }
+        <li>
+            <a href="#" class='category-link' data-category="all"><i class=""></i> Xem tất cả</a>
+        </li>
+    </ul>
+</div>

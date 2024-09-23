@@ -1,0 +1,96 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Book Shop</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets\img\favicon.png">
+		
+		<!-- all css here -->
+        <link rel="stylesheet" href="assets\css\bootstrap.min.css">
+        <link rel="stylesheet" href="assets\css\plugin.css">
+        <link rel="stylesheet" href="assets\css\bundle.css">
+        <link rel="stylesheet" href="assets\css\style.css">
+        <link rel="stylesheet" href="assets\css\responsive.css">
+        <script src="assets\js\vendor\modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+            <!-- Add your site or application content here -->
+            
+            <!--pos page start-->
+            <div class="pos_page">
+                <div class="container">
+                   <!--pos page inner-->
+                    <div class="pos_page_inner">
+                        <!--header area start-->
+                            @await Html.PartialAsync("_Header")
+                        <!--header area end-->
+                <!--pos home section-->
+                <div class=" pos_home_section">
+                    <div class="row pos_home">
+                        <div class="col-lg-3 col-md-8 col-12">                          
+                            <!--categorie menu start-->
+                                @await Component.InvokeAsync("Category")
+                            <!--categorie menu end-->
+                            <!--wishlist block start-->
+                            <div id="wishlist-container">
+                                @await Component.InvokeAsync("Wishlist")
+                            </div>
+
+                              
+                            <!--wishlist block end-->
+
+                            <!--newsletter block start-->
+                            <div class="sidebar_widget newsletter mb-35">
+                                <div class="block_title">
+                                    <h3>newsletter</h3>
+                                </div>
+                                <form action="#">
+                                    <p>Sign up for your newsletter</p>
+                                    <input placeholder="Your email address" type="text">
+                                    <button type="submit">Subscribe</button>
+                                </form>
+                            </div>
+                            <!--newsletter block end-->
+                        </div>
+                        <div class="col-lg-9 col-md-12">
+                            <!--banner slider start-->
+
+                            <!--banner slider start-->
+                            @RenderBody()
+                            <!--new product area start-->
+                            
+                            <!--new product area start-->
+                            <!--featured product start-->
+                            
+                            <!--featured product end-->
+                            <!--banner area start-->
+                            
+                            <!--banner area end-->
+                        </div>
+                    </div>
+                </div>
+                <!--pos home section end-->
+                
+                    <!--pos page inner end-->
+                </div>
+            </div>
+            <!--pos page end-->
+    <!--footer area start-->
+        @await Html.PartialAsync("_Footer")
+    <!--footer area end-->
+            
+		<!-- all js here -->
+        <script src="assets\js\vendor\jquery-1.12.0.min.js"></script>
+        <script src="assets\js\popper.js"></script>
+        <script src="assets\js\bootstrap.min.js"></script>
+        <script src="assets\js\ajax-mail.js"></script>
+        <script src="assets\js\plugins.js"></script>
+        <script src="assets\js\main.js"></script>
+        @await RenderSectionAsync("Scripts",required:false)
+    </body>
+</html>
+

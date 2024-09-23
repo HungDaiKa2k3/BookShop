@@ -1,0 +1,56 @@
+﻿@model BookShop.ViewModels.LoginVM
+@{
+    ViewData["Title"] = "Login";
+    Layout = "_SubLayout";
+}
+
+<!--breadcrumbs area start-->
+<div class="breadcrumbs_area">
+    <div class="row">
+        <div class="col-12">
+            <div class="breadcrumb_content">
+                <ul>
+                    <li><a href="/products">home</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li>login</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs area end-->
+<!-- customer login start -->
+<div class="customer_login">
+    <div class="row">
+        <!--login area start-->
+        <div class="col-lg-6 col-md-6">
+            <div class="account_form">
+                <h2>login</h2>
+                <form asp-action="Login" asp-controller="Customer">
+                    <p>
+                        <label asp-for="Email"> </label>
+                        <input asp-for="Email" type="email">
+                    </p>
+                    <p>
+                        <label asp-for="Password"></label>
+                        <input asp-for="Password" type="password">
+                    </p>
+                    <div class="login_submit">
+                        <button type="submit">login</button>
+                        <label for="remember">
+                            <input id="remember" type="checkbox">
+                            Lưu mật khẩu
+                        </label>
+                        <a href="#">Quên mật khẩu?</a>
+                    </div>
+
+                </form>
+            </div>
+            <label class="text-danger">@ViewBag.msg</label>
+        </div>
+        <!--login area start-->
+    </div>
+</div>
+<!-- customer login end -->
+

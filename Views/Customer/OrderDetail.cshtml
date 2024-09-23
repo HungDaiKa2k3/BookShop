@@ -1,0 +1,105 @@
+﻿@model BookShop.ViewModels.OrderDetailVM
+@{
+    ViewData["Title"] = "OrderDetail";
+    Layout = "~/Views/Shared/_SubLayout.cshtml";
+}
+
+<!--breadcrumbs area start-->
+<div class="breadcrumbs_area">
+    <div class="row">
+        <div class="col-12">
+            <div class="breadcrumb_content">
+                <ul>
+                    <li><a href="/">home</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li>Order Deatil</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs area end-->
+<!--shopping cart area start -->
+<div class="shopping_cart_area">
+    <div class="row">
+        <div class="col-12">
+            <div class="table_desc">
+                <div class="cart_page table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="product_thumb">Hình ảnh</th>
+                                <th class="product_name">Tên sản phẩm</th>
+                                <th class="product-price">Giá</th>
+                                <th class="product_quantity">Số lượng</th>
+                                <th class="product_total">Thành tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.OrderItems)
+                            {
+                                <tr >
+                                    <td class="product_thumb"><a href="#"><img src="assets\img\product\@item.ProductProduNavigation.Image" alt=""></a></td>
+                                    <td class="product_name"><a href="#">@item.ProductProduNavigation.ProductName</a></td>
+                                    <td class="product_name">@item.Price VNĐ</td>
+                                    <td class="product_quantity">@item.Quantity</td>
+                                    <td class="product_name">@item.Total VNĐ</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--shopping cart area end -->
+<!--coupon code area start-->
+<div class="coupon_area">
+    <div class="row">
+        <div class="col-lg-6 col-md-6">
+            <div class="coupon_code">
+                <h3>Customer Detail</h3>
+                <div class="coupon_inner">
+                    <div class="cart_subtotal">
+                        <p>Họ tên</p>
+                        <p class="cart_amount">@Model.CustomerName</p>
+                    </div>
+                    <div class="cart_subtotal ">
+                        <p>Phương thức thanh toán</p>
+                        <p class="cart_amount">@Model.PaymentMethod</p>
+                    </div>
+                    <div class="cart_subtotal ">
+                        <p>Địa chỉ nhận hàng</p>
+                        <p class="cart_amount">@Model.ShipmentAddress</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+            <div class="coupon_code">
+                <h3>Cart Totals</h3>
+                <div class="coupon_inner">
+                    <div class="cart_subtotal">
+                        <p>Subtotal</p>
+                        <p class="cart_amount">@Model.TotalPrice VNĐ</p>
+                    </div>
+                    <div class="cart_subtotal ">
+                        <p>Shipping</p>
+                        <p class="cart_amount">@(Model.TotalPrice * 0.05) VNĐ</p>
+                    </div>
+
+                    <div class="cart_subtotal">
+                        <p>Total</p>
+                        <p class="cart_amount">@(Model.TotalPrice*1.05) VNĐ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--coupon code area end-->
+
+

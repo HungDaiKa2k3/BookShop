@@ -1,0 +1,225 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "_MainLayout";
+}
+<!--breadcrumbs area start-->
+<div class="breadcrumbs_area">
+    <div class="row">
+        <div class="col-12">
+            <div class="breadcrumb_content">
+                <ul>
+                    <li><a href="/">home</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs area end-->
+<!--shop toolbar start-->
+<div class="shop_toolbar mb-35">
+
+    <div class="list_button">
+        <ul class="nav" role="tablist">
+            <li>
+                <a id="large_tab" class="active" data-toggle="tab" href="#large" role="tab" aria-controls="large" aria-selected="true"><i class="fa fa-th-large"></i></a>
+            </li>
+            <li>
+                <a id="list_tab" data-toggle="tab" href="#list" role="tab" aria-controls="list" aria-selected="false"><i class="fa fa-th-list"></i></a>
+            </li>
+        </ul>
+    </div>
+    @* <div class="page_amount">
+        <p>Showing 1–9 of 21 results</p>
+    </div> *@
+
+    <div class="select_option">
+        <form action="#">
+            <label>Sắp xếp</label>
+            <select name="orderby" id="short">
+                <option selected="" value="1">Position</option>
+                <option value="1">Price: Lowest</option>
+                <option value="1">Price: Highest</option>
+                <option value="1">Product Name:Z</option>
+                <option value="1">Sort by price:low</option>
+                <option value="1">Product Name: Z</option>
+                <option value="1">In stock</option>
+                <option value="1">Product Name: A</option>
+                <option value="1">In stock</option>
+            </select>
+        </form>
+    </div>
+</div>
+<!--shop toolbar end-->
+<div id="result">
+    @await Html.PartialAsync("ListProducts")
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('.category-link').click(function (event) {
+                event.preventDefault();
+                var loai = $(this).data('category');
+                $.ajax({
+                    url: '/Products/Index',
+                    data: { category: loai },
+                    method: 'GET',
+                    success: function (result) {
+                        $('#result').html(result);                                
+                        window.history.pushState(null, '', '?category=' + loai);
+                    },
+                    error: function (xhr, status, error) {
+                        alert("Có lỗi xảy ra: " + error);
+                    }
+                });
+            });
+            $(document).on("click", ".cart_remove", function () {
+                var id = $(this).closest(".cart_item").attr("id");
+                $.ajax({
+                    url: '/Customer/removeCart',
+                    data: { productId: id },
+                    method: 'POST',
+                    success: function (response) {
+                        if (response.status == "success") {
+                            var image = response.result.image;
+                            var productName = response.result.productName;
+                            var price = response.result.price;
+                            var quantity = response.result.quantity;
+                            var id = response.result.productId;
+                            var total = parseInt($(".prices").text());
+                            var quan = parseInt($(".total_quan").text()) -quantity;
+                            $(".prices").text(total - price * quantity + " VNĐ");
+                            $(".ships").text(total * 0.05 - price * 0.05 * quantity + " VNĐ");
+                            $(".total_ship").text(total * 1.05 - price * 1.05 * quantity + " VNĐ");
+                            $(".total_quan").text(quan + " sp - ");
+
+                            $(".mini_cart").children(`#${id}`).empty();
+                            //alert('Sản phẩm đã xóa khỏi vào giỏ hàng!');
+                        }                   
+                    },
+                    error: function (xhr, status, error) {
+                        alert("Có lỗi xảy ra: " + error);
+                    }
+                });
+            });
+        });
+
+        var masp;
+        var quantity;
+        function getProductId(element) {
+            masp = $(element).data("masp");
+            quantity = 1;
+        }
+        
+        function getProductId2(element) {
+            masp = $(element).data("masp");
+            quantity=$("#quantity_add").val();
+        }
+        $(document).on('change', '#quantity_add', function () {
+            quantity = $(this).val();
+        });
+
+        function sayhi(){
+            console.log("alo");
+        }
+
+        function confirmAddCart() {
+            $.ajax({
+                url: "/Customer/addCart",
+                data: { productId: masp, quantity: quantity },
+                method: "POST",
+                success: function (response) {
+                    var image = response.result.image;
+                    var productName = response.result.productName;
+                    var price = response.result.price;
+                    var quantity2 = response.result.quantity;//Số lượng tổng
+                    var id = response.result.productId;
+                    console.log(quantity + "------" + quantity2);
+                    if (quantity2 == quantity) {
+                        
+                        $(".mini_cart").prepend(`
+                             <div class="cart_item" id="${id}">
+                                <div class="cart_img">
+                                            <a href="#"><img src="assets/img/product/${image}" alt=""></a>
+                                </div>
+                                <div class="cart_info">
+                                    <a href="#">${productName}</a>
+                                    <span class="cart_price">${price} VNĐ</span>
+                                    <span class="quantity">Số lượng: ${quantity2}</span>
+                                </div>
+                                <div class="cart_remove">
+                                    <a title="Remove this item" href="#"><i class="fa fa-times-circle"></i></a>
+                                </div>
+                            </div>
+                        `);
+
+                        
+                    }else{
+                        //id của cart
+                        $(".mini_cart").children(`#${id}`).find(".quantity").text("Số lượng: "+quantity2);
+                    }
+                    var total = parseInt($(".prices").text());
+                    var quan = parseInt($(".total_quan").text()) + parseInt(quantity);
+                    $(".prices").text(total + price*quantity + " VNĐ");
+                    $(".ships").text(total * 0.05 + price * 0.05*quantity + " VNĐ");
+                    $(".total_ship").text( total * 1.05 + price * 1.05*quantity + " VNĐ");
+                    $(".total_quan").text(quan +" sp - ");
+                    //alert('Sản phẩm đã được thêm vào giỏ hàng!');
+                },
+                error: function (xhr, status, error) {
+                    alert("Có lỗi xảy ra: " + error);
+                }
+            });
+        }
+
+        function confirmRemoveWishlist() {
+            $.ajax({
+                url: "/Customer/removeWishlist",
+                data: { productId: masp },
+                method: "POST",
+                success: function (result) {
+                    $('#wishlist-container').html(result);
+                    //alert('Sản phẩm đã xóa khỏi danh sách yêu thích!');
+                },
+                error: function (xhr, status, error) {
+                    alert("Có lỗi xảy ra: " + error);
+                }
+            });
+        }
+
+        function confirmAddWishlist() {
+            $.ajax({
+                url: "/Customer/addWishlist",
+                data: { productId: masp },
+                method: "POST",
+                success: function (result) {
+                    $('#wishlist-container').html(result);
+                    //alert('Sản phẩm đã được thêm vào danh sách yêu thích!');
+                },
+                error: function (xhr, status, error) {
+                    alert("Có lỗi xảy ra: " + error);
+                }
+            });
+        }
+
+        function quickView(element) {
+            masp = $(element).data('masp');
+            $.ajax({
+                url: '/Products/QuickView',
+                data: { ProductId: masp },
+                method: 'GET',
+                success: function (result) {
+                    $("#name").text(result.productName);
+                    $("#price").text(result.price);
+                    $("#description").text(result.description);
+                    $("#image").attr("src", "assets/img/product/" + result.image);
+                },
+                error: function (xhr, status, error) {
+                    alert("Có lỗi xảy ra: " + error);
+                }
+            });
+        }
+    </script>
+}

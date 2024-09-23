@@ -1,0 +1,280 @@
+﻿@model X.PagedList.IPagedList<BookShop.ViewModels.ProductVM>
+<!--shop tab product-->
+<div class="shop_tab_product">
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="large" role="tabpanel">
+            <div class="row">
+                @foreach (var item in Model)
+                {
+                    <div class="col-lg-4 col-md-6" >
+                        <div class="single_product" data-masp="@item.ProductId">
+                            <div class="product_thumb">
+                                <a asp-action="ViewDetail" asp-controller="Products" asp-route-productid="@item.ProductId"><img src="assets\img\product\@item.Image" alt="@item.ProductName"></a>
+                                <div class="img_icone">
+                                    <img src="assets\img\cart\span-new.png" alt="">
+                                </div>
+                                <div class="product_action">
+                                    <a class="addCart" data-masp="@item.ProductId" onclick="getProductId(this)" data-toggle="modal" data-target="#modal4" href="#"> <i class="fa fa-shopping-cart"></i> Add to cart</a>
+                                </div>
+                            </div>
+                            <div class="product_content">
+                                <span class="product_price">@item.Price VNĐ</span>
+                                <h3 class="product_title"><a href="single-product.html">@item.ProductName</a></h3>
+                            </div>
+                            <div class="product_info">
+                                <ul>
+                                    <li><a id="addWishlist" data-masp="@item.ProductId" onclick="getProductId(this); return false;" href="#" data-toggle="modal" data-target="#modal2" title=" Add to Wishlist ">Add to Wishlist</a></li>
+                                    <li><a href="#" data-masp="@item.ProductId" onclick="quickView(this);getProductId2(this); return false;" data-toggle="modal" data-target="#modal_box" title="Quick view">View Detail</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+        <div class="tab-pane fade" id="list" role="tabpanel">
+            @foreach(var item in Model)
+            {
+                <div class="product_list_item mb-35">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="product_thumb">
+                                <a href="single-product.html"><img src="assets\img\product\@item.Image" alt="@item.ProductName"></a>
+                                <div class="hot_img">
+                                    <img src="assets\img\cart\span-hot.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 col-md-6 col-sm-6">
+                            <div class="list_product_content">
+                                <div class="product_ratting">
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-star"></i></a></li>
+                                    </ul>
+                                </div>
+                                <div class="list_title">
+                                    <h3><a href="single-product.html">@item.ProductName</a></h3>
+                                </div>
+                                <p class="design">@item.Description</p>
+
+                                <div class="content_price">
+                                    <span>@item.Price VNĐ</span>
+                                    @* <span class="old-price">$130.00</span> *@
+                                </div>
+                                <div class="add_links">
+                                    <ul>
+                                        <li><a href="#" data-masp="@item.ProductId" onclick="getProductId(this)" data-toggle="modal" data-target="#modal4" title="add to cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                                        <li><a data-masp="@item.ProductId" onclick="getProductId(this); return false;" data-toggle="modal" data-target="#modal2" href="#" title="add to wishlist"><i class="fa fa-heart" aria-hidden="true"></i></a></li>
+                                        <li><a href="#" data-masp="@item.ProductId" onclick="quickView(this);getProductId2(this); return false;" data-toggle="modal" data-target="#modal_box" title="Quick view"><i class="fa fa-eye" aria-hidden="true"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>
+<!--shop tab product end-->
+
+
+<!--pagination style start-->
+<div class="pagination_style">
+    <div class="item_page">
+    </div>
+    <div class="page_number">
+        <span>Trang: </span>
+        <ul>
+            <li><a href="#" onclick="loadPage(1); return false;" id="firstPage">&laquo;</a></li>
+            <li><a href="#" onclick="prevPage(); return false;" id="prevPage">&lsaquo;</a></li>
+            @for (var i = 1; i <= Model.PageCount; i++)
+            {
+                <li><a href="#" class="@(Model.PageNumber == i ? "text-danger" : "")" onclick="loadPage(@i); return false;" id="page_@i">@i</a></li>
+            }
+            <li><a href="#" onclick="nextPage(); return false;" id="nextPage">&rsaquo;</a></li>
+            <li><a href="#" onclick="loadPage(@Model.PageCount); return false;" id="lastPage">&raquo;</a></li>
+        </ul>
+    </div>
+</div>
+<!--pagination style end-->
+
+<!-- modal area start -->
+<div class="modal fade" id="modal_box" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="modal_body">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-sm-12">
+                            <div class="modal_tab">
+                                <div class="tab-content" id="pills-tabContent">
+                                    <div class="tab-pane fade show active" id="tab1" role="tabpanel">
+                                        <div class="modal_tab_img">
+                                            <a href="#"><img id="image" src="" alt=""></a>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-12">
+                            <div class="modal_right">
+                                <div class="modal_title mb-10">
+                                    <h2 id="name"></h2>
+                                </div>
+                                <div class="modal_price mb-10">
+                                    <span id="price" class="new_price"></span>
+                                    @* <span class="old_price">$78.99</span> *@
+                                </div>
+                                <div class="modal_content mb-5">
+                                    <p id="description"></p>
+                                </div>
+
+                                <div class="modal_add_to_cart mb-15">
+                                    <form action="#">
+                                        <input id="quantity_add" min="0" max="100" value="1" type="number">
+                                        <button data-dismiss="modal" onclick="confirmAddCart(); return false;" type="submit">add to cart</button>
+                                    </form>
+                                </div>
+                                <div class="modal_social">
+                                    <h2>Share this product</h2>
+                                    <ul>
+                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal area end -->
+
+<div class="modal fade" id="modal2">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Thông báo</h4>
+                <button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close">
+                    x
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5>Thêm sản phẩm vào danh sách yêu thích</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                <a onclick="confirmAddWishlist(); return false;" data-dismiss="modal" class="btn btn-primary text-white">Xác nhận</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modal3">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Thông báo</h4>
+                <button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close">
+                    x
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5>Xóa sản phẩm khỏi danh sách yêu thích</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                <a onclick="confirmRemoveWishlist(); return false;" data-dismiss="modal" class="btn btn-primary text-white">Xác nhận</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal4">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Thông báo</h4>
+                <button type="button" class="btn btn-close" data-dismiss="modal" aria-label="Close">
+                    x
+                </button>
+            </div>
+            <div class="modal-body">
+                <h5>Thêm sản phẩm vào giỏ hàng</h5>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+                <a onclick="confirmAddCart(); return false;" data-dismiss="modal" class="btn btn-primary text-white">Xác nhận</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+
+    var currentPage = @Model.PageNumber;
+    var totalPageCount = @Model.PageCount;
+    var largeTabClass = $('#large_tab').hasClass("active");
+
+    function loadPage(page) {
+        if (page < 1 || page > totalPageCount) return;
+        currentPage = page;
+
+        // Lấy toàn bộ query string từ URL
+        var queryString = window.location.search;
+
+        // Sử dụng URLSearchParams để phân tích chuỗi query string
+        var urlParams = new URLSearchParams(queryString);
+
+        // Lấy giá trị của tham số "page"
+        var cate = urlParams.get('category');
+
+        $.ajax({
+            url: '/Products/Index',
+            data: { page: page, category: cate },
+            method: 'GET',
+            success: function (result) {
+                $('#result').html(result);
+                if (largeTabClass == false) {
+                    $('#list').addClass("show active");
+                    $('#large').removeClass("show active");
+                }
+                if (cate == null) {
+                    window.history.pushState(null, '', '?page=' + page);
+                } else {
+                    window.history.pushState(null, '', '?page=' + page+'&category='+cate);
+                }
+                
+            },
+            error: function (xhr, status, error) {
+                alert("Có lỗi xảy ra: " + error);
+            }
+        });
+    }
+
+
+    function prevPage() {
+        loadPage(currentPage - 1);
+    }
+
+    function nextPage() {
+        loadPage(currentPage + 1);
+    }
+</script>

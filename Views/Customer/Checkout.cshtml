@@ -1,0 +1,111 @@
+﻿@model BookShop.ViewModels.CheckoutVM
+@{
+    ViewData["Title"] = "Checkout";
+    Layout = "~/Views/Shared/_SubLayout.cshtml";
+}
+
+<!--breadcrumbs area start-->
+<div class="breadcrumbs_area">
+    <div class="row">
+        <div class="col-12">
+            <div class="breadcrumb_content">
+                <ul>
+                    <li><a href="/">home</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li>checkout</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs area end-->
+<!--Checkout page section-->
+<div class="Checkout_section">
+    <form asp-action="Checkout" asp-controller="Customer" method="post">
+        <div class="checkout_form">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <h3>Billing Details</h3>
+                    <div class="row">
+                        <div class="col-12 mb-30">
+                            <label>Họ và tên<span>*</span></label>
+                            <input asp-for="@Model.Customer.Name" readonly="readonly" type="text">
+                        </div>
+
+                        <div class="col-12 mb-30">
+                            <label>Số điện thoại  <span>*</span></label>
+                            <input readonly="readonly" asp-for="@Model.Customer.PhoneNumber" type="text">
+                        </div>
+                        <div class="col-12 mb-30">
+                            <div class="select_form_select">
+                                <label for="pttt">Phương thức thanh toán <span>*</span></label>
+                                <select asp-for="Payment.PaymentMethod" id="pttt">
+                                    <option value="Thanh toán khi nhận hàng">Thanh toán khi nhận hàng</option>
+                                    <option value="Thanh toán qua ngân hàng">Thanh toán qua ngân hàng</option>
+                                </select>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 mb-30">
+                            <label>Địa chỉ nhận hàng  <span>*</span></label>
+                            <input asp-for="@Model.Shipment.Address" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <h3>Your order</h3>
+                    <div class="order_table table-responsive mb-30">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Sản phẩm</th>
+                                    <th>Thành tiền</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.CartVMs)
+                                {
+                                    <tr>
+                                        <td><strong>@item.ProductName × @item.Quantity</strong></td>
+                                        <td> @item.Total VNĐ</td>
+                                    </tr>
+                                }
+                                @for (int i = 0; i < Model.CartVMs.Count; i++)
+                                {
+                                    <input type="hidden" asp-for="CartVMs[i].CartId" />
+                                    <input type="hidden" asp-for="CartVMs[i].ProductId" />
+                                    <input type="hidden" asp-for="CartVMs[i].Quantity" />
+                                    <input type="hidden" asp-for="CartVMs[i].Total" />
+                                    <input type="hidden" asp-for="CartVMs[i].CustomerId" />
+                                    <input type="hidden" asp-for="CartVMs[i].ProductName" />
+                                    <input type="hidden" asp-for="CartVMs[i].Price" />
+                                    <input type="hidden" asp-for="CartVMs[i].Price" />
+                                    <input type="hidden" asp-for="CartVMs[i].Image" />
+                                }
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>Cart Subtotal</th>
+                                    <td>@Model.CartVMs.Sum(i => i.Total) VNĐ</td>
+                                </tr>
+                                <tr>
+                                    <th>Shipping</th>
+                                    <td><strong>@Model.CartVMs.Sum(i => i.Total * 0.05) VNĐ</strong></td>
+                                </tr>
+                                <tr class="order_total">
+                                    <th>Order Total</th>
+                                    <td><strong>@Model.CartVMs.Sum(i => i.Total * 1.05) VNĐ</strong></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <div class="order_button">
+                        <button type="submit">Check out</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+<!--Checkout page section end-->

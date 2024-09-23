@@ -1,0 +1,79 @@
+﻿
+@{
+    ViewData["Title"] = "MyCart";
+    Layout = "~/Views/Shared/_SubLayout.cshtml";
+}
+
+<!--breadcrumbs area start-->
+<div class="breadcrumbs_area">
+    <div class="row">
+        <div class="col-12">
+            <div class="breadcrumb_content">
+                <ul>
+                    <li><a href="/">home</a></li>
+                    <li><i class="fa fa-angle-right"></i></li>
+                    <li>Shopping Cart</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--breadcrumbs area end-->
+<!--shopping cart area start -->
+<div class="shopping_cart_area">
+    @await Html.PartialAsync("CartList")
+</div>
+<!--shopping cart area end -->
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+
+            $(document).on('click', '.product_remove', function () {
+                var id = $(this).closest("tr").data("masp");
+                $.ajax({
+                    url: '/Customer/removeCart2',
+                    data: { productId: id },
+                    method: 'POST',
+                    success: function (response) {
+                        console.log(response);
+                        $(".shopping_cart_area").html(response);
+                    },
+                    error: function (xhr, status, error) {
+                        alert("Có lỗi xảy ra: " + error);
+                    }
+                });
+            });
+
+
+            $(document).on('focus', '.product_quantity input', function () {
+                $(this).data('oldValue', $(this).val());
+            });
+
+            $(document).on('change', '.product_quantity input', function () {
+                var id = $(this).closest("tr").data("masp");
+
+                var newValue = $(this).val();
+                var oldValue = $(this).data('oldValue');
+
+                if (newValue < 0) {
+                    alert("Giá trị không thể nhỏ hơn 0. Đặt lại giá trị ban đầu.");
+                    $(this).val(oldValue);
+                } else {
+                    $.ajax({
+                        url: '/Customer/updateCart',
+                        data: { productId: id, quantity: newValue },
+                        method: 'POST',
+                        success: function (response) {
+                            $(".shopping_cart_area").html(response);
+                        },
+                        error: function (xhr, status, error) {
+                            alert("Có lỗi xảy ra: " + error);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}

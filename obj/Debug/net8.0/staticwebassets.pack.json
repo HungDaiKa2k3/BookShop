@@ -1,0 +1,809 @@
+{
+  "Files": [
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BookShop.bundle.scp.css",
+      "PackagePath": "staticwebassets\\BookShop.bundle.scp.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\css\\bundle.css",
+      "PackagePath": "staticwebassets\\assets\\css\\bundle.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\css\\plugin.css",
+      "PackagePath": "staticwebassets\\assets\\css\\plugin.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\assets\\css\\responsive.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\assets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\fonts\\MyriadPro-Bold-1.bin",
+      "PackagePath": "staticwebassets\\assets\\fonts\\MyriadPro-Bold-1.bin"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\fonts\\MyriadPro-Bold-2.bin",
+      "PackagePath": "staticwebassets\\assets\\fonts\\MyriadPro-Bold-2.bin"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\fonts\\MyriadPro-Bold-3.bin",
+      "PackagePath": "staticwebassets\\assets\\fonts\\MyriadPro-Bold-3.bin"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\fonts\\MyriadPro-Bold.bin",
+      "PackagePath": "staticwebassets\\assets\\fonts\\MyriadPro-Bold.bin"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\fonts\\MyriadPro-Bold.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\MyriadPro-Bold.svg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\fonts\\MyriadPro-Bold.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\MyriadPro-Bold.ttf"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\fonts\\MyriadPro-Regular-1.bin",
+      "PackagePath": "staticwebassets\\assets\\fonts\\MyriadPro-Regular-1.bin"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\fonts\\MyriadPro-Regular-2.bin",
+      "PackagePath": "staticwebassets\\assets\\fonts\\MyriadPro-Regular-2.bin"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\fonts\\MyriadPro-Regular-3.bin",
+      "PackagePath": "staticwebassets\\assets\\fonts\\MyriadPro-Regular-3.bin"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\fonts\\MyriadPro-Regular.bin",
+      "PackagePath": "staticwebassets\\assets\\fonts\\MyriadPro-Regular.bin"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\fonts\\MyriadPro-Regular.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\MyriadPro-Regular.svg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\fonts\\MyriadPro-Regular.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\MyriadPro-Regular.ttf"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\fonts\\fontawesome-webfont-1.bin",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont-1.bin"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\fonts\\fontawesome-webfont-2.bin",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont-2.bin"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\fonts\\fontawesome-webfont-3.bin",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont-3.bin"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\fonts\\fontawesome-webfont.bin",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.bin"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\assets\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\banner\\background.png",
+      "PackagePath": "staticwebassets\\assets\\img\\banner\\background.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\banner\\banner1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\banner\\banner1.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\banner\\banner11.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\banner\\banner11.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\banner\\banner2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\banner\\banner2.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\banner\\banner3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\banner\\banner3.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\banner\\banner5.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\banner\\banner5.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\banner\\banner6.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\banner\\banner6.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\banner\\banner7.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\banner\\banner7.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\banner\\banner8.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\banner\\banner8.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\banner\\banner9.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\banner\\banner9.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\banner\\bannner10.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\banner\\bannner10.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\blog\\blog1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\blog1.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\blog\\blog10.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\blog10.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\blog\\blog11.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\blog11.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\blog\\blog12.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\blog12.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\blog\\blog13.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\blog13.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\blog\\blog14.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\blog14.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\blog\\blog2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\blog2.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\blog\\blog3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\blog3.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\blog\\blog4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\blog4.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\blog\\blog5.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\blog5.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\blog\\blog6.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\blog6.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\blog\\blog7.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\blog7.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\blog\\blog8.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\blog8.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\blog\\blog9.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\blog9.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\blog\\tweets.jpeg",
+      "PackagePath": "staticwebassets\\assets\\img\\blog\\tweets.jpeg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\brand\\brand1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\brand\\brand1.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\brand\\brand2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\brand\\brand2.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\brand\\brand3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\brand\\brand3.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\brand\\brand4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\brand\\brand4.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\brand\\brand5.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\brand\\brand5.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\brand\\brand6.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\brand\\brand6.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\cart\\cart.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\cart\\cart.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\cart\\cart17.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\cart\\cart17.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\cart\\cart18.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\cart\\cart18.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\cart\\cart19.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\cart\\cart19.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\cart\\cart2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\cart\\cart2.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\cart\\cart3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\cart\\cart3.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\cart\\cart4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\cart\\cart4.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\cart\\cart5.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cart\\cart5.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\cart\\count.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cart\\count.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\cart\\count2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cart\\count2.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\cart\\count3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cart\\count3.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\cart\\span-hot.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cart\\span-hot.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\cart\\span-new.png",
+      "PackagePath": "staticwebassets\\assets\\img\\cart\\span-new.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\favicon.png",
+      "PackagePath": "staticwebassets\\assets\\img\\favicon.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\logo\\fontlogo.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\logo\\fontlogo.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\logo\\fontlogo2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\logo\\fontlogo2.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\logo\\logo.jpg.png",
+      "PackagePath": "staticwebassets\\assets\\img\\logo\\logo.jpg.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\portfolio\\port1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\portfolio\\port1.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\portfolio\\port10.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\portfolio\\port10.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\portfolio\\port11.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\portfolio\\port11.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\portfolio\\port12.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\portfolio\\port12.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\portfolio\\port2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\portfolio\\port2.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\portfolio\\port3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\portfolio\\port3.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\portfolio\\port4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\portfolio\\port4.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\portfolio\\port5.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\portfolio\\port5.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\portfolio\\port6.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\portfolio\\port6.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\portfolio\\port7.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\portfolio\\port7.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\portfolio\\port8.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\portfolio\\port8.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\portfolio\\port9.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\portfolio\\port9.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh1.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh10.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh10.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh11.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh11.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh12.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh12.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh13.png",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh13.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh14.png",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh14.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh15.png",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh15.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh16.png",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh16.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh17.png",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh17.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh18.png",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh18.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh19.png",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh19.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh2.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh20.png",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh20.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh21.png",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh21.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh22.png",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh22.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh23.png",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh23.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh24.png",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh24.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh3.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh4.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh5.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh5.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh6.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh6.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh7.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh7.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh8.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh8.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\product\\anh9.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\product\\anh9.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\services\\service1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\services\\service1.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\services\\service2.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\services\\service2.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\services\\service3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\services\\service3.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\services\\service4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\services\\service4.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\ship\\about1.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\ship\\about1.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\ship\\about3.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\ship\\about3.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\ship\\about4.jpg",
+      "PackagePath": "staticwebassets\\assets\\img\\ship\\about4.jpg"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\ship\\nav-left-teal.png",
+      "PackagePath": "staticwebassets\\assets\\img\\ship\\nav-left-teal.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\ship\\nav-right-teal.png",
+      "PackagePath": "staticwebassets\\assets\\img\\ship\\nav-right-teal.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\slider\\slide_1.png",
+      "PackagePath": "staticwebassets\\assets\\img\\slider\\slide_1.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\slider\\slide_4.png",
+      "PackagePath": "staticwebassets\\assets\\img\\slider\\slide_4.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\slider\\slider_2.png",
+      "PackagePath": "staticwebassets\\assets\\img\\slider\\slider_2.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\slider\\slider_3.png",
+      "PackagePath": "staticwebassets\\assets\\img\\slider\\slider_3.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\img\\visha\\papyel.png",
+      "PackagePath": "staticwebassets\\assets\\img\\visha\\papyel.png"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\js\\ajax-mail.js",
+      "PackagePath": "staticwebassets\\assets\\js\\ajax-mail.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\assets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\js\\plugins.js",
+      "PackagePath": "staticwebassets\\assets\\js\\plugins.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\js\\popper.js",
+      "PackagePath": "staticwebassets\\assets\\js\\popper.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\js\\vendor\\jquery-1.12.0.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor\\jquery-1.12.0.min.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\assets\\js\\vendor\\modernizr-2.8.3.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\vendor\\modernizr-2.8.3.min.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\cart.html",
+      "PackagePath": "staticwebassets\\cart.html"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\checkout.html",
+      "PackagePath": "staticwebassets\\checkout.html"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\js\\customer.js",
+      "PackagePath": "staticwebassets\\js\\customer.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\login.html",
+      "PackagePath": "staticwebassets\\login.html"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\single-product.html",
+      "PackagePath": "staticwebassets\\single-product.html"
+    },
+    {
+      "Id": "D:\\BackEndC#\\BookShop\\wwwroot\\wishlist.html",
+      "PackagePath": "staticwebassets\\wishlist.html"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BookShop.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BookShop.props",
+      "PackagePath": "build\\BookShop.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BookShop.props",
+      "PackagePath": "buildMultiTargeting\\BookShop.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BookShop.props",
+      "PackagePath": "buildTransitive\\BookShop.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

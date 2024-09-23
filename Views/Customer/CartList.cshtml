@@ -1,0 +1,74 @@
+﻿@model IEnumerable<BookShop.ViewModels.CartVM>
+    <div class="row">
+        <div class="col-12">
+            <div class="table_desc">
+                <div class="cart_page table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="product_remove" style="min-width:50px">Delete</th>
+                                <th class="product_thumb">Hình ảnh</th>
+                                <th class="product_name">Tên sản phẩm</th>
+                                <th class="product-price">Giá</th>
+                                <th class="product_quantity">Số lượng</th>
+                                <th class="product_total">Thành tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model)
+                            {
+                                <tr data-masp="@item.ProductId">
+                                    <td class="product_remove"><a href="#"><i class="fa fa-trash-o"></i></a></td>
+                                    <td class="product_thumb"><a href="#"><img src="assets\img\product\@item.Image" alt=""></a></td>
+                                    <td class="product_name"><a href="#">@item.ProductName</a></td>
+                                    <td class="product_price">@item.Price VNĐ</td>
+                                    <td class="product_quantity"><input min="0" value="@item.Quantity" type="number"></td>
+                                    <td class="product_total">@item.Total VNĐ</td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--coupon code area start-->
+    <div class="coupon_area">
+        <div class="row">
+            <div class="col-lg-6 col-md-6">
+                <div class="coupon_code">
+                    <h3>Coupon</h3>
+                    <div class="coupon_inner">
+                        <p>Enter your coupon code if you have one.</p>
+                        <input placeholder="Coupon code" type="text">
+                        <button type="submit">Apply coupon</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <div class="coupon_code">
+                    <h3>Cart Totals</h3>
+                    <div class="coupon_inner">
+                        <div class="cart_subtotal">
+                            <p>Subtotal</p>
+                            <p class="cart_amount">@Model.Sum(c=>c.Total) VNĐ</p>
+                        </div>
+                        <div class="cart_subtotal ">
+                            <p>Shipping</p>
+                        <p class="cart_amount">@Model.Sum(c => c.Total*0.05) VNĐ</p>
+                        </div>
+
+                        <div class="cart_subtotal">
+                            <p>Total</p>
+                        <p class="cart_amount">@Model.Sum(c => c.Total*1.05) VNĐ</p>
+                        </div>
+                        <div class="checkout_btn">
+                            <a href="#">Proceed to Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--coupon code area end-->
