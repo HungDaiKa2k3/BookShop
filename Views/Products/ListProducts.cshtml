@@ -245,28 +245,50 @@
 
         // Lấy giá trị của tham số "page"
         var cate = urlParams.get('category');
+        var search = urlParams.get('searchstring');
 
-        $.ajax({
-            url: '/Products/Index',
-            data: { page: page, category: cate },
-            method: 'GET',
-            success: function (result) {
-                $('#result').html(result);
-                if (largeTabClass == false) {
-                    $('#list').addClass("show active");
-                    $('#large').removeClass("show active");
+         
+        if (search == null) {
+            $.ajax({
+                url: '/Products/Index',
+                data: { page: page, category: cate },
+                method: 'GET',
+                success: function (result) {
+                    $('#result').html(result);
+                    if (largeTabClass == false) {
+                        $('#list').addClass("show active");
+                        $('#large').removeClass("show active");
+                    }
+                    window.history.pushState(null, '', '?category=' + cate + '&page=' + page);
+
+                },
+                error: function (xhr, status, error) {
+                    alert("Có lỗi xảy ra: " + error);
                 }
-                if (cate == null) {
-                    window.history.pushState(null, '', '?page=' + page);
-                } else {
-                    window.history.pushState(null, '', '?page=' + page+'&category='+cate);
+            });
+        }
+         if (search != null) {
+            $.ajax({
+                url: '/Products/Search',
+                data: { page: page, searchstring: search },
+                method: 'GET',
+                success: function (result) {
+                    $('#result').html(result);
+                    if (largeTabClass == false) {
+                        $('#list').addClass("show active");
+                        $('#large').removeClass("show active");
+                    }
+                    window.history.pushState(null, '', '?searchstring=' + search + '&page='+page);
+                    
+
+                },
+                error: function (xhr, status, error) {
+                    alert("Có lỗi xảy ra: " + error);
                 }
-                
-            },
-            error: function (xhr, status, error) {
-                alert("Có lỗi xảy ra: " + error);
-            }
-        });
+            });
+        }
+
+        
     }
 
 

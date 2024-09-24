@@ -68,7 +68,7 @@
                     method: 'GET',
                     success: function (result) {
                         $('#result').html(result);                                
-                        window.history.pushState(null, '', '?category=' + loai);
+                        window.history.pushState(null, '', '?category=' + loai +"&page=1");
                     },
                     error: function (xhr, status, error) {
                         alert("Có lỗi xảy ra: " + error);
@@ -104,6 +104,24 @@
                     }
                 });
             });
+
+            $('.btnSearch').click(function (event) {
+                event.preventDefault();
+                var searchString = $(this).prev().val();
+                $.ajax({
+                    url: '/Products/Search',
+                    data: { searchString: searchString },
+                    method: 'GET',
+                    success: function (result) {
+                        $('#result').html(result);
+                        window.history.pushState(null, '', '?searchstring=' + searchString+'&page=1');
+                    },
+                    error: function (xhr, status, error) {
+                        alert("Có lỗi xảy raa: " + error);
+                    }
+                });
+            });
+
         });
 
         var masp;
@@ -120,10 +138,6 @@
         $(document).on('change', '#quantity_add', function () {
             quantity = $(this).val();
         });
-
-        function sayhi(){
-            console.log("alo");
-        }
 
         function confirmAddCart() {
             $.ajax({

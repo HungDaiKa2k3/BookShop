@@ -1,6 +1,8 @@
 ﻿using BookShop.Models;
 using BookShop.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using System.Globalization;
+using System.Text;
 using X.PagedList.Extensions;
 
 namespace BookShop.Controllers
@@ -12,10 +14,11 @@ namespace BookShop.Controllers
         {
             db = context;
         }
+
         public IActionResult Index(int? page,int? category)
         {
             int pageNumber = page ?? 1;
-            int pageSize = 6;
+            int pageSize = 2;
             var products = db.Products.AsQueryable();
             if (category.HasValue) 
             {
@@ -37,6 +40,32 @@ namespace BookShop.Controllers
             }
 
             return View(pagedResult);
+        }
+        public IActionResult Search(int? page, string? searchString)
+        {
+            int pageNumber = page ?? 1;
+            int pageSize = 2;
+            var products = db.Products.AsQueryable();
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                products = products.Where(p => p.ProductName.Contains(searchString));
+            }
+            var result = products.Select(p => new ProductVM()
+            {
+                ProductId = p.ProductId,
+                Price = p.Price,
+                ProductName = p.ProductName,
+                Image = p.Image,
+                Description = p.Description,
+            }).ToList();
+            var pagedResult = result.ToPagedList(pageNumber, pageSize);
+
+            if (HttpContext.Request.Headers["X-Requested-With"] == "XMLHttpRequest")
+            {
+                return PartialView("ListProducts", pagedResult);
+            }
+
+            return View("Index",pagedResult);
         }
 
         public IActionResult QuickView(int ProductId)
